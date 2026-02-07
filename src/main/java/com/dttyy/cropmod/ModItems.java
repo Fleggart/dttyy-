@@ -1,24 +1,28 @@
 package com.dttyy.cropmod;
-import com.dttyy.cropmod.item.ItemCornSeed;
+
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import com.dttyy.cropmod.item.ItemCornSeed;
 
-@EventBusSubscriber(modid = "cropmod")
+@EventBusSubscriber(modid = CropMod.MODID)
 public class ModItems {
 
-    public static ItemCornSeed cornSeed;
-    public static Item corn;
+    public static ItemCornSeed CORN_SEED;
+    public static Item CORN;
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
-        cornSeed = new ItemCornSeed();
 
-        corn = new Item()
-                .setRegistryName("cropmod", "corn")
-                .setTranslationKey("cropmod.corn");
+        // Seeds
+        CORN_SEED = new ItemCornSeed();
+        
+        // Crop item
+        CORN = new Item()
+            .setRegistryName("cropmod", "corn")
+            .setTranslationKey("cropmod.corn");
 
-        event.getRegistry().registerAll(cornSeed, corn);
+        event.getRegistry().registerAll(CORN_SEED, CORN);
     }
 }
