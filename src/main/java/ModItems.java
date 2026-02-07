@@ -1,9 +1,22 @@
-public static Item cornSeed;
-public static Item corn;
+package your.package.name;
 
-public static void init() {
-    cornSeed = new Item().setUnlocalizedName("corn_seed").setRegistryName("corn_seed");
-    corn = new ItemFood(3, 0.3F, false).setUnlocalizedName("corn").setRegistryName("corn");
-    GameRegistry.register(cornSeed);
-    GameRegistry.register(corn);
+import net.minecraft.item.Item;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+
+public class ModItems {
+
+    public static Item cornSeed;
+    public static Item corn;
+
+    public static void init() {
+        cornSeed = new Item()
+            .setUnlocalizedName("corn_seed")
+            .setRegistryName("corn_seed");
+        corn = new Item()
+            .setUnlocalizedName("corn")
+            .setRegistryName("corn");
+
+        GameRegistry.register(cornSeed);
+        GameRegistry.register(corn);
+    }
 }
