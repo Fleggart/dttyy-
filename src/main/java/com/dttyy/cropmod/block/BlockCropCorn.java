@@ -12,12 +12,11 @@ public class BlockCropCorn extends BlockCrops {
     }
 
     @Override
-    protected Item getSeed() {
-        return ModItems.CORN_SEED;
-    }
+protected Item getSeed() {
+    return ModItems.SEEDS.get(cropName);
+}
 
-    @Override
-    protected Item getCrop() {
-        return ModItems.CORN;
-    }
+@Override
+protected Item getCrop() {
+    return ModItems.CROPS.get(cropName);
 }
