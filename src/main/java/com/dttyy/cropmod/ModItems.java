@@ -13,11 +13,11 @@ public class ModItems {
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
-        cornSeed = new Item()
+        cornSeed = new ItemCornSeed();
                 .setRegistryName("cropmod", "corn_seed")
                 .setTranslationKey("cropmod.corn_seed");
 
-        cornSeed = new ItemCornSeed();
+        corn = new Item()
                 .setRegistryName("cropmod", "corn")
                 .setTranslationKey("cropmod.corn");
 
