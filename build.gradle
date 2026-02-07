@@ -12,7 +12,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.cleanroom.mod:api:1.0.0' // 假设版本
+    implementation 'com.cleanroom.mod:api:0.4.2'
 }
 
 java {
