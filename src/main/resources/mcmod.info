@@ -1,7 +1,0 @@
-{
-  "modid": "mc_mod_inspector",
-  "name": "MC Mod Inspector",
-  "description": "A Cleanroom Loader mod template for scanning and inspecting mods.",
-  "version": "1.0.0",
-  "authorList": ["YourName"]
-}
