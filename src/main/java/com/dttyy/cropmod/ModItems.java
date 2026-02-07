@@ -15,11 +15,11 @@ public class ModItems {
     public static void registerItems(RegistryEvent.Register<Item> event) {
         cornSeed = new Item()
                 .setRegistryName("cropmod", "corn_seed")
-                .setUnlocalizedName("corn_seed");
+                .setTranslationKey("cropmod.corn_seed");
 
         corn = new Item()
                 .setRegistryName("cropmod", "corn")
-                .setUnlocalizedName("corn");
+                .setTranslationKey("cropmod.corn");
 
         event.getRegistry().registerAll(cornSeed, corn);
     }
