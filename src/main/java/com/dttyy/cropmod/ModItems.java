@@ -14,8 +14,6 @@ public class ModItems {
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
         cornSeed = new ItemCornSeed();
-                .setRegistryName("cropmod", "corn_seed")
-                .setTranslationKey("cropmod.corn_seed");
 
         corn = new Item()
                 .setRegistryName("cropmod", "corn")
