@@ -1,18 +1,16 @@
 package com.yourname.modinspector;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import com.cleanroom.loader.api.Mod; // 假设 Cleanroom Loader 提供的注解
 
 @Mod(
-    modid = ModInfo.MOD_ID,
+    id = ModInfo.MOD_ID,
     name = ModInfo.NAME,
     version = ModInfo.VERSION
 )
 public class ModMain {
 
-    @Mod.EventHandler
-    public void init(FMLInitializationEvent event) {
-        System.out.println(ModInfo.NAME + " is initializing!");
-        platform.forge.ForgeBootstrap.bootstrap();
+    public void onInitialize() {
+        System.out.println(ModInfo.NAME + " initialized on Cleanroom Loader!");
+        platform.cleanroom.CleanroomBootstrap.bootstrap();
     }
 }
