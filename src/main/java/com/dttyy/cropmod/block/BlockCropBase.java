@@ -2,10 +2,12 @@ package com.dttyy.cropmod.block;
 
 import net.minecraft.block.BlockCrops;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.NonNullList;
+import net.minecraft.item.ItemFood;
 import com.dttyy.cropmod.ModItems;
 
 public class BlockCropBase extends BlockCrops {
-
     private final String cropName;
 
     public BlockCropBase(String name) {
@@ -21,6 +23,15 @@ public class BlockCropBase extends BlockCrops {
 
     @Override
     protected Item getCrop() {
-        return ModItems.CROPS.get(cropName);
+        return ModItems.FOODS.get(cropName);
+    }
+
+    @Override
+    public void getDrops(NonNullList<ItemStack> drops, net.minecraft.world.IBlockAccess world,
+                         net.minecraft.util.math.BlockPos pos,
+                         net.minecraft.block.state.IBlockState state, int fortune) {
+        super.getDrops(drops, world, pos, state, fortune);
+        // 添加普通果实掉落
+        drops.add(new ItemStack(ModItems.NORMALS.get(cropName)));
     }
 }
