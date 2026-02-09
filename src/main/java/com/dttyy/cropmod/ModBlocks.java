@@ -10,6 +10,7 @@ import java.util.Map;
 
 @Mod.EventBusSubscriber(modid = CropMod.MODID)
 public class ModBlocks {
+
     public static final Map<String, BlockCropBase> CROPS = new HashMap<>();
 
     @SubscribeEvent
