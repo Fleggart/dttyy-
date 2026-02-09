@@ -11,6 +11,6 @@ public class CropMod {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        // 这里不用手动注册 Block/Item，使用事件自动注册
+        // 注册已由事件自动完成
     }
 }
