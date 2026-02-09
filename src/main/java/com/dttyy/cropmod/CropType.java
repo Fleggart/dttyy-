@@ -1,29 +1,30 @@
 package com.dttyy.cropmod;
 
 public enum CropType {
-    CORN("corn", 4, 0.6F),
-    TOMATO("tomato", 5, 0.8F),
-    CARROT("carrot", 3, 0.6F);
+
+    CORN("corn", true, true),
+    TOMATO("tomato", true, false),
+    POTATO("potato", true, true);
 
     private final String name;
-    private final int hunger;
-    private final float saturation;
+    private final boolean hasFood;
+    private final boolean hasMaterial;
 
-    CropType(String name, int hunger, float saturation) {
+    CropType(String name, boolean hasFood, boolean hasMaterial) {
         this.name = name;
-        this.hunger = hunger;
-        this.saturation = saturation;
+        this.hasFood = hasFood;
+        this.hasMaterial = hasMaterial;
     }
 
     public String getName() {
         return name;
     }
 
-    public int getHunger() {
-        return hunger;
+    public boolean hasFood() {
+        return hasFood;
     }
 
-    public float getSaturation() {
-        return saturation;
+    public boolean hasMaterial() {
+        return hasMaterial;
     }
 }
