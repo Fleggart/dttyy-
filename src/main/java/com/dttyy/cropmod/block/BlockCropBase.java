@@ -10,10 +10,10 @@ public class BlockCropBase extends BlockCrops {
 
     private final String cropName;
 
-    public BlockCropBase(String name) {
-        this.cropName = name;
-        setRegistryName("cropmod", "crop_" + name);
-        setTranslationKey("cropmod.crop_" + name);
+    public BlockCropBase(String cropName) {
+        this.cropName = cropName;
+        setRegistryName("cropmod", "crop_" + cropName);
+        setTranslationKey("cropmod.crop_" + cropName);
     }
 
     @Override
@@ -29,7 +29,6 @@ public class BlockCropBase extends BlockCrops {
     @Override
     public void getDrops(NonNullList<ItemStack> drops, net.minecraft.world.IBlockAccess world, net.minecraft.util.math.BlockPos pos,
                          net.minecraft.block.state.IBlockState state, int fortune) {
-
         super.getDrops(drops, world, pos, state, fortune);
 
         if (ModItems.MATERIALS.containsKey(cropName)) {
