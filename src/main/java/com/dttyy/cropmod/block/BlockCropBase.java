@@ -27,8 +27,10 @@ public class BlockCropBase extends BlockCrops {
     }
 
     @Override
-    public void getDrops(NonNullList<ItemStack> drops, net.minecraft.world.IBlockAccess world, net.minecraft.util.math.BlockPos pos,
+    public void getDrops(NonNullList<ItemStack> drops, net.minecraft.world.IBlockAccess world,
+                         net.minecraft.util.math.BlockPos pos,
                          net.minecraft.block.state.IBlockState state, int fortune) {
+
         super.getDrops(drops, world, pos, state, fortune);
 
         if (ModItems.MATERIALS.containsKey(cropName)) {
