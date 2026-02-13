@@ -2,16 +2,15 @@ package com.dttyy.cropmod.data;
 
 public enum StemCropType {
 
-CORN("corn7");
+    PUMPKIN("pumpkin");
 
-private final String name;
+    private final String name;
 
-StemCropType(String name) {
-    this.name = name;
-}
+    StemCropType(String name) {
+        this.name = name;
+    }
 
-public String getName() {
-    return name;
-}
-
+    public String getName() {
+        return name;
+    }
 }
