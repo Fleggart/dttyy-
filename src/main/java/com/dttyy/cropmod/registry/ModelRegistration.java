@@ -10,7 +10,6 @@ import net.minecraftforge.fml.relauncher.Side;
 public class ModelRegistration {
 
     @SubscribeEvent
-    public static void registerModels(ModelRegistryEvent event) {
-
+    public static void registerModels(ModelRegistryEvent e) {
     }
 }
