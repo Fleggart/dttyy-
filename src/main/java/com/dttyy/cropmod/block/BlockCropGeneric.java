@@ -5,10 +5,10 @@ import net.minecraft.item.Item;
 
 public class BlockCropGeneric extends BlockCrops {
 
-    private final Item seed;
-    private final Item crop;
+    private Item seed;
+    private Item crop;
 
-    public BlockCropGeneric(Item seed, Item crop) {
+    public void setItems(Item seed, Item crop) {
         this.seed = seed;
         this.crop = crop;
     }
