@@ -8,21 +8,17 @@ public enum CropType {
     Corn("Corn", 3, 0.6f, false),
     Barley("Barley", 3, 0.6f, false);
 
-private final String name;
-private final int hunger;
-private final float saturation;
-private final boolean hasMaterial;
+    private final String name;
+    private final int hunger;
+    private final float saturation;
 
-CropType(String name, int hunger, float saturation, boolean hasMaterial) {
-    this.name = name;
-    this.hunger = hunger;
-    this.saturation = saturation;
-    this.hasMaterial = hasMaterial;
-}
+    CropType(String name, int hunger, float saturation) {
+        this.name = name;
+        this.hunger = hunger;
+        this.saturation = saturation;
+    }
 
-public String getName() { return name; }
-public int getHunger() { return hunger; }
-public float getSaturation() { return saturation; }
-public boolean hasMaterial() { return hasMaterial; }
-
+    public String getName() { return name; }
+    public int getHunger() { return hunger; }
+    public float getSaturation() { return saturation; }
 }
