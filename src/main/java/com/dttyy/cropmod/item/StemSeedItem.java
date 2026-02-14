@@ -4,8 +4,8 @@ import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemSeeds;
 
-public class CropSeedItem extends ItemSeeds {
-    public CropSeedItem(Block crop) {
-        super(crop, Blocks.FARMLAND);
+public class StemSeedItem extends ItemSeeds {
+    public StemSeedItem(Block stem) {
+        super(stem, Blocks.FARMLAND);
     }
 }
