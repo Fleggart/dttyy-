@@ -1,3 +1,21 @@
+package com.dttyy.cropmod.registry;
+
+import com.dttyy.cropmod.ModConstants;
+import com.dttyy.cropmod.data.CropType;
+import com.dttyy.cropmod.data.StemCropType;
+import com.dttyy.cropmod.item.CropSeedItem;
+import com.dttyy.cropmod.item.StemSeedItem;
+import com.dttyy.cropmod.block.BlockCropGeneric;
+import com.dttyy.cropmod.block.BlockStemGeneric;
+import com.dttyy.cropmod.block.BlockFruitGeneric;
+
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemFood;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+
 @Mod.EventBusSubscriber(modid = ModConstants.MODID)
 public class ModItems {
 
@@ -24,7 +42,7 @@ public class ModItems {
             e.getRegistry().register(cropItem);
         }
 
-        // 藤作物
+        // 藤类作物
         for (StemCropType type : StemCropType.values()) {
             String name = type.getName();
 
